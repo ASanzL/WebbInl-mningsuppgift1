@@ -1,0 +1,12 @@
+body{
+    margin:0px;
+    padding:0px;
+}
+.wrapper{
+    display: grid;
+    grid-template-columns: 150px 50px 1fr 100px;
+    background-color: green;
+}
+nav{
+    background-color: red;
+}
