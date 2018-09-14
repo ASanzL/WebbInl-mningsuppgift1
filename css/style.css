@@ -4,9 +4,30 @@ body{
 }
 .wrapper{
     display: grid;
-    grid-template-columns: 150px 50px 1fr 100px;
+    grid-template-rows: 120px 50px 1fr 100px;
     background-color: green;
 }
 nav{
     background-color: red;
+}
+main{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 700px);
+    grid-gap: 10px;
+    padding:10px;
+}
+article{
+    background-color: yellowgreen;
+}
+article>h1{
+    color: #ffffff;
+    margin:0px 0px 10px 0px;
+    padding:5px;
+    font-size: 40px;
+    background-color: blueviolet;
+}
+article>img{
+    display: block;
+    margin: 0 auto;
 }
