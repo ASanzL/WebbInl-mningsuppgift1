@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand:300');
+
 body{
     margin:0px;
     padding:0px;
@@ -5,29 +7,47 @@ body{
 .wrapper{
     display: grid;
     grid-template-rows: 120px 50px 1fr 100px;
-    background-color: green;
+    background-color: #FFE03A;
 }
 nav{
-    background-color: red;
+    background-color: #FF5726;
 }
 main{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(3, 700px);
     grid-gap: 10px;
     padding:10px;
 }
 article{
-    background-color: yellowgreen;
+    background-color: #fff3b4;
 }
 article>h1{
     color: #ffffff;
-    margin:0px 0px 10px 0px;
+    margin:0px 0px 0px 0px;
     padding:5px;
     font-size: 40px;
-    background-color: blueviolet;
+    font-family: 'Quicksand';
+    background-color: #FF5726;
+    text-shadow: 1px 1px 1px #000;
+    letter-spacing: 1px;
+    text-indent: 5px;
 }
 article>img{
     display: block;
     margin: 0 auto;
+    width:100%;
+    height: auto;
+}
+
+/* Desktop */
+@media screen and (min-width: 1025px) {
+    main{
+    grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* Tablet */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+
 }
