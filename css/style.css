@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Quicksand:300');
+@import url('https://fonts.googleapis.com/css?family=Martel:300');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:700');
+@import url('https://fonts.googleapis.com/css?family=Satisfy');
 
 body{
     margin:0px;
@@ -6,28 +9,76 @@ body{
 }
 .wrapper{
     display: grid;
-    grid-template-rows: 120px 50px 1fr 100px;
+    grid-template-rows: 180px auto 1fr 100px;
     background-color: #FFE03A;
 }
+header{
+    background-image: url('../img/banner.jpg');
+    position: relative;
+}
+header>h1{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin:10px;
+    padding:10px;
+    color: #fbfbfb;
+    text-shadow: 4px 4px 2px #000;
+    //background-color:#00000073;
+    font-family: 'Satisfy', cursive;
+    font-size: 40px;
+    letter-spacing: 3px;
+}
 nav{
-    background-color: #FF5726;
+    background-color: #12b126;
+}
+nav>ul{
+    list-style-type: none;
+    margin:0px;
+    padding:0px;
+    overflow: hidden;
+}
+nav>ul>li{
+    float: left;
+}
+nav>ul>li a{
+    display: block;
+    background-color: #12b126;
+    text-align:center;
+    padding:10px;
+    text-decoration: none;
+    font-size:20px;
+    color:#404040;
+    text-transform: uppercase;
+    font-family: 'Open Sans', sans-serif;
+}
+nav>ul>li a:hover{
+    background-color: #25d43b;
 }
 main{
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(3, 700px);
+    grid-template-rows: auto;
     grid-gap: 10px;
-    padding:10px;
+    padding: 0px;
 }
 article{
     background-color: #fff3b4;
+    height: 100%;
+}
+a.info{
+    text-decoration: none;
+    border:1px solid #afafaf;
+}
+a.info:hover{
+    border:1px solid #ff5726;
 }
 article>h1{
     color: #ffffff;
     margin:0px 0px 0px 0px;
     padding:5px;
     font-size: 40px;
-    font-family: 'Quicksand';
+    font-family: 'Quicksand', sans-serif;
     background-color: #FF5726;
     text-shadow: 1px 1px 1px #000;
     letter-spacing: 1px;
@@ -39,11 +90,30 @@ article>img{
     width:100%;
     height: auto;
 }
+.popular{
+    border:0px solid #0d8c1d;
+    background-color: #ffe456;
+    border-left-width: 2px;
+    padding:10px;
+    margin:10px 10px 5px 10px;
+    color: #ff5726;
+    font-size: 20px;
+    font-weight: bold;
+}
+.infoText{
+    padding:10px;
+    color:#313131;
+    font-family: 'Martel', serif;
+}
 
 /* Desktop */
 @media screen and (min-width: 1025px) {
+    .wrapper{
+        grid-template-rows: 370px auto 1fr 100px;
+    }
     main{
     grid-template-columns: repeat(4, 1fr);
+    padding: 10px;
     }
 }
 
