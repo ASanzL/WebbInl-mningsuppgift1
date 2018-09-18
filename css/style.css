@@ -55,7 +55,7 @@ nav>ul>li a{
 nav>ul>li a:hover{
     background-color: #25d43b;
 }
-main{
+main.start{
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: auto;
@@ -65,6 +65,9 @@ main{
 article{
     background-color: #fff3b4;
     height: 100%;
+}
+article.visaSida{
+    background-color:red;
 }
 a.info{
     text-decoration: none;
@@ -105,15 +108,61 @@ article>img{
     color:#313131;
     font-family: 'Martel', serif;
 }
+form{
+    font-family: 'Quicksand', sans-serif;
+    margin:10px;
+}
+fieldset{
+    border:1px solid #ae9d9d;
+    padding:20px;
+}
+legend{
+    font-size: 24px;
+    padding:0px 15px 0px 15px;
+    border:1px solid #ae9d9d;
+    background-color: #ffffff7a;
+}
+label{
+    font-size: 20px;
+    padding:10px;
+}
+input{
+    font-size: 18px;
+    border:none;
+    padding:5px;
+    color:#555555;
+}
+input[type=text]:hover,input[type="email"]:hover,input[type="password"]:hover{
+    background-color: aliceblue;
+}
+input[type="submit"]{
+    background-color: #12b126;
+    border:none;
+    font-size: 20px;
+    padding:10px;
+    font-family: 'Open Sans', sans-serif;
+    color:#4d4d4d;
+}
+input[type="submit"]:hover {
+    background-color: #159b26;
+    cursor: pointer;
+}
 
 /* Desktop */
 @media screen and (min-width: 1025px) {
     .wrapper{
         grid-template-rows: 370px auto 1fr 100px;
     }
-    main{
+    main.start{
     grid-template-columns: repeat(4, 1fr);
     padding: 10px;
+    }
+    main.visaSida{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+        grid-gap: 10px;
+        padding: 10px;
     }
 }
 
