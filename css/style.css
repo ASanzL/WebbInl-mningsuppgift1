@@ -10,7 +10,7 @@ body{
 }
 .wrapper{
     display: grid;
-    grid-template-rows: 180px auto 1fr 100px;
+    grid-template-rows: 100px auto 1fr 100px;
     background-color: #FFAC63;
 }
 header{
@@ -25,9 +25,8 @@ header>h1{
     padding:10px;
     color: #fbfbfb;
     text-shadow: 4px 4px 2px #000;
-    //background-color:#00000073;
     font-family: 'Satisfy', cursive;
-    font-size: 40px;
+    font-size: 32px;
     letter-spacing: 3px;
 }
 nav{
@@ -70,7 +69,7 @@ article{
     height: 100%;
 }
 article.visaSida{
-    background-color:red;
+    background-color: #ffe4b3;
 }
 a.info{
     text-decoration: none;
@@ -125,6 +124,8 @@ legend{
     padding:5px 15px 5px 15px;
     border:1px solid #ae9d9d;
     background-color: #ffe4b3;
+    font-family: 'Open Sans', sans-serif;
+    color:#e87449;
 }
 label{
     font-size: 20px;
@@ -151,11 +152,23 @@ input[type="submit"]:hover {
     background-color: #159b26;
     cursor: pointer;
 }
+.formHelp{
+    //visibility: hidden;
+    background: #FFD12E url('../img/exclamation.png') no-repeat;
+    background-size: contain;
+    text-indent: 30px;
+    border:1px solid #a2a2a2;
+    padding:2px;
+    font-size: 18px;
+}
 
 /* Desktop */
 @media screen and (min-width: 1025px) {
     .wrapper{
         grid-template-rows: 370px auto 1fr 100px;
+    }
+    header>h1{
+        font-size: 40px;
     }
     main.start{
     grid-template-columns: repeat(4, 1fr);
