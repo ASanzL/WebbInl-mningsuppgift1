@@ -75,7 +75,7 @@ article.visaSida{
 }
 a.info{
     text-decoration: none;
-    border:1px solid transparent;
+    border:none;
 }
 a.info:hover{
     border:1px solid #ff5726;
@@ -129,6 +129,9 @@ legend{
     font-family: 'Open Sans', sans-serif;
     color:#e87449;
 }
+table{
+    width:100%;
+}
 label{
     font-size: 20px;
     padding:10px;
@@ -138,6 +141,7 @@ input{
     border:none;
     padding:5px;
     color:#555555;
+    width:100%;
 }
 input[type=text]:hover,input[type="email"]:hover,input[type="password"]:hover{
     background-color: aliceblue;

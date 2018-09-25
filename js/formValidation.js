@@ -1,9 +1,11 @@
 var elHelpText = document.getElementById('formHelp');
 var elUsername = document.getElementById('username');
 var elPassword = document.getElementById('password');
+var elSubmit = document.getElementById('submit');
 
 //Dölj hjälp rutan
 elHelpText.hidden = true;
+elUsername.setAttribute("placeholder", localStorage.getItem("username"));
 
 function validate() {
     if(elUsername.value.length < 5 && elUsername.value.length != 0){
@@ -18,6 +20,15 @@ function validate() {
     }
 }
 
+function addUser(event) {
+    console.log("1");
+    if(elHelpText.innerText == "") {
+        console.log("2");
+        localStorage.setItem("username", elUsername.value);
+    }
+    event.preventDefault();
+}
+
 function writeError(text){
     elHelpText.hidden = false;
     elHelpText.innerText = text;
@@ -25,3 +36,4 @@ function writeError(text){
 
 elUsername.addEventListener("input", validate);
 elPassword.addEventListener("input", validate);
+elSubmit.addEventListener("click", addUser);
