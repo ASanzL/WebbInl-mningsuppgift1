@@ -5,7 +5,10 @@ var elSubmit = document.getElementById('submit');
 
 //Dölj hjälp rutan
 elHelpText.hidden = true;
-elUsername.setAttribute("placeholder", localStorage.getItem("username"));
+var usernameLocalStorageString = "username";
+if(localStorage.getItem(usernameLocalStorageString) != null){
+    elUsername.setAttribute("placeholder", localStorage.getItem(usernameLocalStorageString));
+}
 
 function validate() {
     if(elUsername.value.length < 5 && elUsername.value.length != 0){
@@ -24,7 +27,7 @@ function addUser(event) {
     console.log("1");
     if(elHelpText.innerText == "") {
         console.log("2");
-        localStorage.setItem("username", elUsername.value);
+        localStorage.setItem(usernameLocalStorageString, elUsername.value);
     }
     event.preventDefault();
 }
